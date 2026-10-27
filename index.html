@@ -142,32 +142,5 @@ main{max-width:1120px;margin:34px auto;padding:0 24px 48px}.hero{background:line
 </body>
 </html>'''
 
-(out / "index.html").write_text(html, encoding="utf-8")
-readme = """MC HARRY C. TOLENTINO — RESUME WEBSITE
 
-HOW TO OPEN
-1. Extract the ZIP file.
-2. Open the folder.
-3. Double-click index.html. It will open in your browser.
 
-HOW TO USE
-- Use the navigation links to jump to resume sections.
-- Click “Download Resume” or “Print / Save as PDF”.
-- In the print window, choose “Save as PDF” to save a PDF copy.
-
-HOW TO PUBLISH ONLINE
-You can upload index.html to a static website host such as GitHub Pages or Netlify.
-The site is a single-page static website and does not need a server.
-
-NOTES
-- Content is based on the supplied Word resume.
-- The age is shown as written in the document; update it if needed.
-- No profile photo or reference contact details were supplied.
-"""
-(out / "README.txt").write_text(readme, encoding="utf-8")
-zip_path = Path("/mnt/data/Mc_Harry_Resume_Website.zip")
-with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED) as z:
-    for p in out.iterdir():
-        z.write(p, arcname=f"mc_harry_resume_website/{p.name}")
-print(f"Created: {zip_path}")
-print(f"Website HTML: {out / 'index.html'}")
