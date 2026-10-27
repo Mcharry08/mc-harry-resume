@@ -1,142 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Online resume and professional profile of Mc Harry C. Tolentino.">
-<title>Mc Harry C. Tolentino | Resume</title>
- <img src="resumePhoto.jpg" alt="Mc Harry Tolentino" class="profile-photo">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Resume of Mc Harry C. Tolentino"><title>Mc Harry C. Tolentino | Resume</title>
 <style>
-:root{--navy:#142b4a;--blue:#2f6fed;--sky:#eaf1ff;--ink:#1c2635;--muted:#64748b;--paper:#fff;--bg:#f3f6fb;--line:#e5eaf2}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,Segoe UI,Arial,sans-serif}
-a{color:inherit;text-decoration:none}.topbar{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav{max-width:1120px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:800;letter-spacing:.3px;color:var(--navy)}.brand span{color:var(--blue)}.navlinks{display:flex;gap:22px;align-items:center;font-size:.92rem;color:#4b5870}.navlinks a:hover{color:var(--blue)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--blue);color:white;border:0;border-radius:10px;padding:11px 17px;font-weight:700;cursor:pointer;box-shadow:0 8px 20px #2f6fed26;transition:.2s}.btn:hover{transform:translateY(-2px);background:#245bd0}.btn.secondary{background:white;color:var(--navy);border:1px solid var(--line);box-shadow:none}
-main{max-width:1120px;margin:34px auto;padding:0 24px 48px}.hero{background:linear-gradient(120deg,#142b4a 0%,#1d4678 60%,#2f6fed 100%);color:white;border-radius:24px;padding:54px;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;box-shadow:0 18px 45px #19345a1c}.hero:after{content:"";position:absolute;width:330px;height:330px;border:1px solid #ffffff25;border-radius:50%;right:-95px;top:-130px;box-shadow:0 0 0 35px #ffffff08,0 0 0 75px #ffffff06}.eyebrow{text-transform:uppercase;letter-spacing:2.2px;font-size:.78rem;font-weight:800;color:#b9d1ff}.hero h1{font-size:clamp(2.25rem,5vw,4rem);line-height:1.08;letter-spacing:-1.5px;margin:12px 0 15px}.hero p{max-width:630px;color:#e0eaff;margin:0 0 25px;font-size:1.06rem}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}.hero .btn.secondary{background:#ffffff12;color:white;border-color:#ffffff4a}.monogram{width:155px;height:155px;border:1px solid #ffffff55;background:#ffffff15;border-radius:32px;display:grid;place-items:center;font-size:2.7rem;font-weight:800;letter-spacing:2px;position:relative;z-index:1;box-shadow:inset 0 0 35px #ffffff0a}
-.quickfacts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0 34px}.fact{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:17px 19px;display:flex;gap:13px;align-items:center}.fact-icon{width:42px;height:42px;border-radius:12px;background:var(--sky);color:var(--blue);display:grid;place-items:center;font-size:1.2rem;flex-shrink:0}.fact small{display:block;color:var(--muted);font-size:.76rem;text-transform:uppercase;letter-spacing:1px}.fact strong{font-size:.94rem;overflow-wrap:anywhere}
-.layout{display:grid;grid-template-columns: minmax(0,1.45fr) minmax(270px,.8fr);gap:22px;align-items:start}.column{display:grid;gap:22px}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:27px;box-shadow:0 8px 24px #17345a07}.section-heading{display:flex;gap:12px;align-items:center;margin:0 0 20px;color:var(--navy);font-size:1.2rem}.section-heading .symbol{width:38px;height:38px;background:var(--sky);color:var(--blue);display:grid;place-items:center;border-radius:11px;font-size:1.1rem}.objective{margin:0;color:#4b5870}.objective-list{padding-left:20px;margin:15px 0 0;color:#4b5870}.objective-list li{margin:7px 0}.timeline{border-left:2px solid #d9e5fb;margin-left:7px;padding-left:22px;display:grid;gap:23px}.timeline-item{position:relative}.timeline-item:before{content:"";position:absolute;left:-29px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--blue);border:3px solid white;box-shadow:0 0 0 2px #cfe0ff}.date{color:var(--blue);font-size:.78rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase}.timeline h3{margin:4px 0;font-size:1.02rem;color:var(--navy)}.timeline p{margin:0;color:var(--muted);font-size:.92rem}.skills{display:flex;flex-wrap:wrap;gap:9px}.skill{background:#f2f6ff;border:1px solid #e0eaff;border-radius:999px;padding:8px 12px;font-size:.88rem;color:#284a82;font-weight:650}.details{display:grid;gap:0}.detail{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.91rem}.detail:last-child{border-bottom:0}.detail span{color:var(--muted)}.detail strong{text-align:right;font-weight:650;overflow-wrap:anywhere}.reference{background:linear-gradient(135deg,#f5f8ff,#fff);border:1px solid #e2eaff;border-radius:13px;padding:17px}.reference strong{display:block;color:var(--navy)}.reference span{font-size:.9rem;color:var(--muted)}.note{color:var(--muted);font-size:.84rem;margin:18px 0 0}.footer{text-align:center;color:#78859a;font-size:.86rem;padding:22px 10px 0}
-@media(max-width:780px){.navlinks{display:none}main{margin:20px auto;padding:0 14px 30px}.hero{padding:32px 25px;grid-template-columns:1fr}.monogram{width:95px;height:95px;border-radius:23px;font-size:1.8rem;grid-row:1}.hero h1{font-size:2.45rem}.quickfacts{grid-template-columns:1fr}.layout{grid-template-columns:1fr}.card{padding:22px}.hero:after{right:-200px}}
-@media print{body{background:white}.topbar,.hero-actions{display:none!important}main{margin:0;max-width:none;padding:0}.hero{border-radius:0;box-shadow:none;padding:28px;background:#142b4a!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.card,.fact{box-shadow:none;break-inside:avoid}.layout{grid-template-columns:1.3fr 1fr}.quickfacts{grid-template-columns:repeat(3,1fr)}a{color:inherit}}
+:root{--navy:#142b4a;--blue:#2f6fed;--ink:#1c2635;--muted:#64748b;--line:#e5eaf2}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f3f6fb;color:var(--ink);font:16px/1.65 Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}.nav{background:#fff;border-bottom:1px solid var(--line);padding:14px max(22px,calc((100% - 1080px)/2));display:flex;justify-content:space-between;align-items:center;gap:14px;position:sticky;top:0}.brand{font-weight:800;color:var(--navy)}.brand span{color:var(--blue)}.navlinks{display:flex;gap:18px;color:#4b5870;font-size:.9rem}.btn{border:0;border-radius:9px;background:var(--blue);color:white;padding:11px 16px;font-weight:700;cursor:pointer;display:inline-block}.wrap{max-width:1080px;margin:28px auto;padding:0 20px}.hero{background:linear-gradient(120deg,#142b4a,#1d4678 65%,#2f6fed);border-radius:22px;color:#fff;padding:48px;display:flex;justify-content:space-between;align-items:center;gap:25px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.78rem;color:#c5d9ff;font-weight:bold}.hero h1{font-size:clamp(2.4rem,5vw,4rem);line-height:1.08;margin:12px 0}.hero p{color:#e0eaff;max-width:650px}.actions{display:flex;gap:10px;flex-wrap:wrap}.secondary{background:#ffffff15;border:1px solid #ffffff66}.monogram{border:1px solid #ffffff66;background:#ffffff15;border-radius:28px;width:135px;height:135px;display:grid;place-items:center;font-size:2.2rem;font-weight:800;flex-shrink:0}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 26px}.fact,.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}.fact small{display:block;color:var(--muted);font-size:.74rem;text-transform:uppercase;letter-spacing:1px}.fact strong{overflow-wrap:anywhere}.layout{display:grid;grid-template-columns:1.4fr .85fr;gap:20px;align-items:start}.column{display:grid;gap:20px}.card{padding:25px}.card h2{font-size:1.2rem;color:var(--navy);margin:0 0 16px}.muted{color:var(--muted)}ul{padding-left:20px}.timeline{border-left:2px solid #d9e5fb;padding-left:20px;display:grid;gap:20px}.item{position:relative}.item:before{content:'';position:absolute;left:-26px;top:6px;width:10px;height:10px;background:var(--blue);border:3px solid white;border-radius:50%;box-shadow:0 0 0 2px #cfe0ff}.date{font-size:.78rem;color:var(--blue);font-weight:bold}.item h3{font-size:1rem;color:var(--navy);margin:4px 0}.item p{margin:0;color:var(--muted);font-size:.92rem}.skills{display:flex;gap:8px;flex-wrap:wrap}.skill{background:#f2f6ff;border:1px solid #e0eaff;border-radius:30px;padding:7px 11px;color:#284a82;font-size:.88rem}.detail{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.9rem}.detail:last-child{border:0}.detail span{color:var(--muted)}.detail strong{text-align:right;overflow-wrap:anywhere}.reference{background:#f5f8ff;border:1px solid #e2eaff;border-radius:12px;padding:16px}.reference strong,.reference span{display:block}.reference span,footer{color:var(--muted)}footer{text-align:center;padding:25px;font-size:.85rem}@media(max-width:760px){.navlinks{display:none}.wrap{margin:18px auto;padding:0 13px}.hero{padding:28px 23px;flex-direction:column-reverse;align-items:flex-start}.monogram{width:85px;height:85px;font-size:1.5rem;border-radius:20px}.hero h1{font-size:2.4rem}.facts,.layout{grid-template-columns:1fr}.card{padding:21px}}@media print{body{background:#fff}.nav,.actions{display:none}.wrap{margin:0;max-width:none}.hero{border-radius:0;padding:25px;print-color-adjust:exact;-webkit-print-color-adjust:exact}.layout{grid-template-columns:1.3fr 1fr}.card,.fact{break-inside:avoid}}
 
- </style>
-</head>
-<body>
-<header class="topbar">
-  <nav class="nav" aria-label="Main navigation">
-    <a class="brand" href="#home">MC HARRY<span>.</span></a>
-    <div class="navlinks">
-      <a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#personal">Personal Info</a>
-    </div>
-    <button class="btn" onclick="window.print()" aria-label="Print or save resume as PDF">↓ Download Resume</button>
-  </nav>
-</header>
-<main id="home">
-  <section class="hero">
-    <div>
-      <div class="eyebrow">Curriculum Vitae · Personal Profile</div>
-      <h1>Mc Harry C.<br>Tolentino</h1>
-      <p>Motivated and hardworking individual eager to contribute skills, learn from new experiences, and grow professionally in a supportive work environment.</p>
-      <div class="hero-actions">
-        <a class="btn" href="mailto:Mcharrytolentino08@gmail.com">✉ Contact Me</a>
-        <button class="btn secondary" onclick="window.print()">Print / Save as PDF</button>
-      </div>
-    </div>
-    <div class="monogram" aria-label="Initials MCT">MCT</div>
-  </section>
+.profile-photo {
+  width: 155px;
+  height: 155px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 780px) {
+  .profile-photo {
+    width: 110px;
+    height: 110px;
+  }
+}
 
-  <section class="quickfacts" aria-label="Contact information">
-    <div class="fact"><div class="fact-icon">✉</div><div><small>Email</small><strong><a href="mailto:Mcharrytolentino08@gmail.com">Mcharrytolentino08@gmail.com</a></strong></div></div>
-    <div class="fact"><div class="fact-icon">☎</div><div><small>Phone</small><strong><a href="tel:09701080411">0970 108 0411</a></strong></div></div>
-    <div class="fact"><div class="fact-icon">⌖</div><div><small>Location</small><strong>Sta. Lucia, Capas, Tarlac</strong></div></div>
-  </section>
-
-  <div class="layout">
-    <div class="column">
-      <section class="card" id="about">
-        <h2 class="section-heading"><span class="symbol">✦</span> Career Objective</h2>
-        <p class="objective">To be part of a company where I can enhance my skills and knowledge, gain additional experience, share what I have learned, and contribute to both personal development and organizational goals.</p>
-        <ul class="objective-list">
-          <li>Gain knowledge and experience that will strengthen my skills and capabilities.</li>
-          <li>Share my learning experiences, knowledge, and abilities.</li>
-          <li>Seek meaningful employment and achieve personal and professional growth.</li>
-          <li>Contribute to a workplace that values growth, excellence, and teamwork.</li>
-        </ul>
-      </section>
-
-      <section class="card" id="education">
-        <h2 class="section-heading"><span class="symbol">▤</span> Education</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="date">2017 – 2019</div>
-            <h3>Technical-Vocational-Livelihood Education – Agriculture</h3>
-            <p>Pangasinan State University · Sta. Maria, Pangasinan</p>
-          </div>
-          <div class="timeline-item">
-            <div class="date">2013 – 2017</div>
-            <h3>Secondary Education</h3>
-            <p>Sta. Lucia High School · Sta. Lucia, Capas, Tarlac</p>
-          </div>
-          <div class="timeline-item">
-            <div class="date">2006 – 2013</div>
-            <h3>Primary Education</h3>
-            <p>Sta. Lucia Elementary School · Sta. Lucia, Capas, Tarlac</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="card" id="skills">
-        <h2 class="section-heading"><span class="symbol">✧</span> Skills &amp; Abilities</h2>
-        <div class="skills">
-          <span class="skill">Computer Literate</span>
-          <span class="skill">Filipino &amp; English Proficient</span>
-          <span class="skill">Hardworking</span>
-          <span class="skill">Fast Learner</span>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2 class="section-heading"><span class="symbol">✓</span> Declaration</h2>
-        <p class="objective">I hereby certify that the information contained in this resume is true, complete, and correct to the best of my knowledge. Additional information may be furnished upon request.</p>
-        <p style="margin:22px 0 0;font-weight:800;color:var(--navy)">MC HARRY C. TOLENTINO</p>
-      </section>
-    </div>
-
-    <aside class="column">
-      <section class="card" id="personal">
-        <h2 class="section-heading"><span class="symbol">◎</span> Personal Information</h2>
-        <div class="details">
-          <div class="detail"><span>Date of Birth</span><strong>August 22, 2000</strong></div>
-          <div class="detail"><span>Age</span><strong>26</strong></div>
-          <div class="detail"><span>Religion</span><strong>INC</strong></div>
-          <div class="detail"><span>Civil Status</span><strong>Single</strong></div>
-          <div class="detail"><span>Height</span><strong>5′3″</strong></div>
-          <div class="detail"><span>Weight</span><strong>50 kg</strong></div>
-          <div class="detail"><span>Father</span><strong>Ferdinand Tolentino</strong></div>
-          <div class="detail"><span>Mother</span><strong>Editha Tolentino</strong></div>
-        </div>
-      </section>
-
-      <section class="card">
-        <h2 class="section-heading"><span class="symbol">♧</span> Character Reference</h2>
-        <div class="reference">
-          <strong>Mr. Ernesto Ginto</strong>
-          <span>Barangay Captain</span>
-        </div>
-        <p class="note">Contact details were not included in the supplied resume.</p>
-      </section>
-
-      <section class="card">
-        <h2 class="section-heading"><span class="symbol">↗</span> Get in Touch</h2>
-        <p class="objective">For employment opportunities or further information, feel free to contact me.</p>
-        <p style="margin:16px 0 0"><a class="btn" style="width:100%" href="mailto:Mcharrytolentino08@gmail.com">Send an Email</a></p>
-      </section>
-    </aside>
-  </div>
-  <footer class="footer">© <span id="year"></span> Mc Harry C. Tolentino · Resume Website</footer>
-</main>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
-</html>'''
-
-
-
+.profile-photo{border:3px solid #ffffffaa;background:#ffffff15;border-radius:50%;width:135px;height:135px;object-fit:cover;display:block;flex-shrink:0;position:relative;z-index:1;box-shadow:0 8px 24px #0002}
+@media(max-width:760px){.profile-photo{width:85px;height:85px}}
+</style></head><body>
+<header class="nav"><a class="brand" href="#top">MC HARRY<span>.</span></a><div class="navlinks"><a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#personal">Personal Info</a></div><button class="btn" onclick="window.print()">Download / Print PDF</button></header>
+<main class="wrap" id="top"><section class="hero"><div><div class="eyebrow">Curriculum Vitae · Personal Profile</div><h1>Mc Harry C.<br>Tolentino</h1><p>Motivated and hardworking individual eager to contribute skills, learn from new experiences, and grow professionally in a supportive work environment.</p><div class="actions"><a class="btn" href="mailto:Mcharrytolentino08@gmail.com">✉ Contact Me</a><button class="btn secondary" onclick="window.print()">Print / Save as PDF</button></div></div><img src="resumePhoto.jpg" alt="Mc Harry Tolentino" class="profile-photo"></section>
+<section class="facts"><div class="fact"><small>Email</small><strong><a href="mailto:Mcharrytolentino08@gmail.com">Mcharrytolentino08@gmail.com</a></strong></div><div class="fact"><small>Phone</small><strong><a href="tel:09701080411">0970 108 0411</a></strong></div><div class="fact"><small>Location</small><strong>Sta. Lucia, Capas, Tarlac</strong></div></section>
+<div class="layout"><div class="column"><section class="card" id="about"><h2>✦ Career Objective</h2><p class="muted">To be part of a company where I can enhance my skills and knowledge, gain additional experience, share what I have learned, and contribute to personal development and organizational goals.</p><ul class="muted"><li>Gain knowledge and experience that strengthen my skills.</li><li>Share my learning experiences, knowledge, and abilities.</li><li>Seek meaningful employment and achieve professional growth.</li><li>Contribute to a workplace that values growth, excellence, and teamwork.</li></ul></section>
+<section class="card" id="education"><h2>▤ Education</h2><div class="timeline"><div class="item"><div class="date">2017 – 2019</div><h3>Technical-Vocational-Livelihood Education – Agriculture</h3><p>Pangasinan State University · Sta. Maria, Pangasinan</p></div><div class="item"><div class="date">2013 – 2017</div><h3>Secondary Education</h3><p>Sta. Lucia High School · Sta. Lucia, Capas, Tarlac</p></div><div class="item"><div class="date">2006 – 2013</div><h3>Primary Education</h3><p>Sta. Lucia Elementary School · Sta. Lucia, Capas, Tarlac</p></div></div></section>
+<section class="card" id="skills"><h2>✧ Skills &amp; Abilities</h2><div class="skills"><span class="skill">Computer Literate</span><span class="skill">Filipino &amp; English Proficient</span><span class="skill">Hardworking</span><span class="skill">Fast Learner</span></div></section><section class="card"><h2>✓ Declaration</h2><p class="muted">I hereby certify that the information contained in this resume is true, complete, and correct to the best of my knowledge. Additional information may be furnished upon request.</p><strong>MC HARRY C. TOLENTINO</strong></section></div>
+<aside class="column"><section class="card" id="personal"><h2>◎ Personal Information</h2><div class="detail"><span>Date of Birth</span><strong>August 22, 2000</strong></div><div class="detail"><span>Age</span><strong>26</strong></div><div class="detail"><span>Religion</span><strong>INC</strong></div><div class="detail"><span>Civil Status</span><strong>Single</strong></div><div class="detail"><span>Height</span><strong>5′3″</strong></div><div class="detail"><span>Weight</span><strong>50 kg</strong></div><div class="detail"><span>Father</span><strong>Ferdinand Tolentino</strong></div><div class="detail"><span>Mother</span><strong>Editha Tolentino</strong></div></section><section class="card"><h2>♧ Character Reference</h2><div class="reference"><strong>Mr. Ernesto Ginto</strong><span>Barangay Captain</span></div><p class="muted" style="font-size:.85rem">Contact details were not included in the supplied resume.</p></section><section class="card"><h2>↗ Get in Touch</h2><p class="muted">For employment opportunities or further information, feel free to contact me.</p><a class="btn" style="width:100%;text-align:center" href="mailto:Mcharrytolentino08@gmail.com">Send an Email</a></section></aside></div><footer>© <span id="year"></span> Mc Harry C. Tolentino · Resume Website</footer></main><script>document.getElementById('year').textContent=new Date().getFullYear()</script></body></html>
