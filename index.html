@@ -9,11 +9,13 @@
 
 <style>
 :root {
-  --navy: #142b4a;
-  --blue: #2f6fed;
-  --ink: #1c2635;
-  --muted: #64748b;
-  --line: #e5eaf2;
+  --navy: #ffffff;
+  --blue: #ffffff;
+  --ink: #ffffff;
+  --muted: #cccccc;
+  --line: #444444;
+  --background: #000000;
+  --card: #080808;
 }
 
 * {
@@ -26,18 +28,22 @@ html {
 
 body {
   margin: 0;
-  background: #f3f6fb;
+  background: var(--background);
   color: var(--ink);
   font: 16px/1.65 Arial, Helvetica, sans-serif;
 }
 
 a {
-  color: inherit;
+  color: #ffffff;
   text-decoration: none;
 }
 
+a:hover {
+  color: #cccccc;
+}
+
 .nav {
-  background: #fff;
+  background: #000000;
   border-bottom: 1px solid var(--line);
   padding: 14px max(22px, calc((100% - 1080px) / 2));
   display: flex;
@@ -51,29 +57,62 @@ a {
 
 .brand {
   font-weight: 800;
-  color: var(--navy);
+  color: #ffffff;
+  white-space: nowrap;
 }
 
 .brand span {
-  color: var(--blue);
+  color: #999999;
 }
 
 .navlinks {
   display: flex;
   gap: 18px;
-  color: #4b5870;
+  color: #ffffff;
   font-size: .9rem;
 }
 
+.navlinks a {
+  color: #ffffff;
+}
+
+.navlinks a:hover {
+  color: #bbbbbb;
+}
+
 .btn {
-  border: 0;
+  border: 1px solid #ffffff;
   border-radius: 9px;
-  background: var(--blue);
-  color: white;
+  background: #ffffff;
+  color: #000000;
   padding: 11px 16px;
   font-weight: 700;
   cursor: pointer;
   display: inline-block;
+  font-size: .88rem;
+  text-align: center;
+  transition: .2s;
+}
+
+.btn:hover {
+  background: #cccccc;
+  color: #000000;
+}
+
+.secondary {
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #777777;
+}
+
+.secondary:hover {
+  background: #222222;
+  color: #ffffff;
+}
+
+.btn:disabled {
+  opacity: .6;
+  cursor: wait;
 }
 
 .wrap {
@@ -83,9 +122,10 @@ a {
 }
 
 .hero {
-  background: linear-gradient(120deg, #142b4a, #1d4678 65%, #2f6fed);
+  background: #080808;
+  border: 1px solid #292929;
   border-radius: 22px;
-  color: #fff;
+  color: #ffffff;
   padding: 48px;
   display: flex;
   justify-content: space-between;
@@ -97,7 +137,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: .78rem;
-  color: #c5d9ff;
+  color: #cccccc;
   font-weight: bold;
 }
 
@@ -105,10 +145,11 @@ a {
   font-size: clamp(2.4rem, 5vw, 4rem);
   line-height: 1.08;
   margin: 12px 0;
+  color: #ffffff;
 }
 
 .hero p {
-  color: #e0eaff;
+  color: #dddddd;
   max-width: 650px;
 }
 
@@ -116,37 +157,31 @@ a {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-}
-
-.secondary {
-  background: #ffffff15;
-  border: 1px solid #ffffff66;
+  margin-top: 20px;
 }
 
 .profile-photo {
-  border: 3px solid #ffffffaa;
-  background: #ffffff15;
+  border: 3px solid #ffffff;
+  background: #111111;
   border-radius: 50%;
   width: 135px;
   height: 135px;
   object-fit: cover;
   display: block;
   flex-shrink: 0;
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 8px 24px #0002;
+  box-shadow: 0 8px 24px #ffffff12;
 }
 
 .facts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
   margin: 18px 0 26px;
 }
 
 .fact,
 .card {
-  background: #fff;
+  background: var(--card);
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 20px;
@@ -154,13 +189,14 @@ a {
 
 .fact small {
   display: block;
-  color: var(--muted);
+  color: #bbbbbb;
   font-size: .74rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .fact strong {
+  color: #ffffff;
   overflow-wrap: anywhere;
 }
 
@@ -174,6 +210,7 @@ a {
 .column {
   display: grid;
   gap: 20px;
+  min-width: 0;
 }
 
 .card {
@@ -182,12 +219,14 @@ a {
 
 .card h2 {
   font-size: 1.2rem;
-  color: var(--navy);
+  color: #ffffff;
   margin: 0 0 16px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #555555;
 }
 
 .muted {
-  color: var(--muted);
+  color: #cccccc;
 }
 
 ul {
@@ -195,7 +234,7 @@ ul {
 }
 
 .timeline {
-  border-left: 2px solid #d9e5fb;
+  border-left: 2px solid #555555;
   padding-left: 20px;
   display: grid;
   gap: 20px;
@@ -212,32 +251,37 @@ ul {
   top: 6px;
   width: 10px;
   height: 10px;
-  background: var(--blue);
-  border: 3px solid white;
+  background: #ffffff;
+  border: 2px solid #000000;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px #cfe0ff;
+  box-shadow: 0 0 0 1px #888888;
 }
 
 .date {
   font-size: .78rem;
-  color: var(--blue);
+  color: #dddddd;
   font-weight: bold;
 }
 
 .item h3 {
   font-size: 1rem;
-  color: var(--navy);
+  color: #ffffff;
   margin: 4px 0;
 }
 
 .item p {
   margin: 0;
-  color: var(--muted);
+  color: #cccccc;
   font-size: .92rem;
+  overflow-wrap: anywhere;
 }
 
 .item ul {
   margin-bottom: 0;
+}
+
+.item ul li {
+  color: #cccccc;
 }
 
 .skills {
@@ -247,11 +291,11 @@ ul {
 }
 
 .skill {
-  background: #f2f6ff;
-  border: 1px solid #e0eaff;
+  background: #111111;
+  border: 1px solid #555555;
   border-radius: 30px;
   padding: 7px 11px;
-  color: #284a82;
+  color: #ffffff;
   font-size: .88rem;
 }
 
@@ -260,7 +304,7 @@ ul {
   justify-content: space-between;
   gap: 10px;
   padding: 10px 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid #333333;
   font-size: .9rem;
 }
 
@@ -269,17 +313,18 @@ ul {
 }
 
 .detail span {
-  color: var(--muted);
+  color: #cccccc;
 }
 
 .detail strong {
+  color: #ffffff;
   text-align: right;
   overflow-wrap: anywhere;
 }
 
 .reference {
-  background: #f5f8ff;
-  border: 1px solid #e2eaff;
+  background: #111111;
+  border: 1px solid #555555;
   border-radius: 12px;
   padding: 16px;
 }
@@ -287,22 +332,43 @@ ul {
 .reference strong,
 .reference span {
   display: block;
+  color: #ffffff;
 }
 
-.reference span,
-footer {
-  color: var(--muted);
+.reference span {
+  color: #cccccc;
 }
 
 footer {
+  color: #bbbbbb;
   text-align: center;
   padding: 25px;
   font-size: .85rem;
+  border-top: 1px solid #444444;
+  margin-top: 25px;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .navlinks {
+    gap: 10px;
+  }
 }
 
 @media (max-width: 760px) {
   .navlinks {
     display: none;
+  }
+
+  .nav {
+    padding: 12px 16px;
+  }
+
+  .nav .actions {
+    margin-top: 0;
   }
 
   .wrap {
@@ -335,35 +401,82 @@ footer {
   }
 }
 
+/* PRINT SETTINGS */
 @media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  html,
   body {
-    background: #fff;
+    background: #000000 !important;
+    color: #ffffff !important;
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
   }
 
   .nav,
   .actions {
-    display: none;
+    display: none !important;
   }
 
   .wrap {
     margin: 0;
     max-width: none;
+    padding: 0;
+  }
+
+  .hero,
+  .card,
+  .fact,
+  .reference,
+  .skill {
+    background: #080808 !important;
+    color: #ffffff !important;
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
   }
 
   .hero {
     border-radius: 0;
     padding: 25px;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
   }
 
   .layout {
     grid-template-columns: 1.3fr 1fr;
+    gap: 12px;
   }
 
-  .card,
-  .fact {
+  .column {
+    gap: 12px;
+  }
+
+  .card {
+    padding: 14px;
     break-inside: avoid;
+  }
+
+  .item,
+  .fact,
+  .reference {
+    break-inside: avoid;
+  }
+
+  .card h2,
+  .item h3,
+  .item p,
+  .item ul,
+  .detail strong,
+  .detail span,
+  .muted,
+  footer {
+    color: #ffffff !important;
+  }
+
+  a {
+    color: #ffffff !important;
+    text-decoration: none !important;
   }
 }
 </style>
@@ -371,6 +484,7 @@ footer {
 
 <body>
 
+<!-- NAVIGATION -->
 <header class="nav">
   <a class="brand" href="#top">MC HARRY<span>.</span></a>
 
@@ -382,9 +496,15 @@ footer {
     <a href="#personal">Personal Info</a>
   </div>
 
-  <button class="btn" onclick="window.print()">
-    Download / Print PDF
-  </button>
+  <div class="actions" style="margin-top:0">
+    <button class="btn secondary" onclick="window.print()">
+      Print Resume
+    </button>
+
+    <button class="btn" onclick="downloadPDF(this)">
+      Download PDF
+    </button>
+  </div>
 </header>
 
 <main class="wrap" id="top">
@@ -404,11 +524,15 @@ footer {
 
       <div class="actions">
         <a class="btn" href="mailto:Mcharrytolentino08@gmail.com">
-          ✉ Contact Me
+          Contact Me
         </a>
 
         <button class="btn secondary" onclick="window.print()">
-          Print / Save as PDF
+          Print Resume
+        </button>
+
+        <button class="btn secondary" onclick="downloadPDF(this)">
+          Download PDF
         </button>
       </div>
     </div>
@@ -522,7 +646,7 @@ footer {
 
             <ul class="muted">
               <li>
-                Lead and coordinated the capstone team throughout
+                Led and coordinated the capstone team throughout
                 the system development process.
               </li>
               <li>
@@ -606,20 +730,20 @@ footer {
       </section>
 
       <!-- CHARACTER REFERENCE -->
-     
-        <h2></h2>
+      <section class="card" id="character-reference">
+        <h2>♧ Character Reference</h2>
 
-        <div class="">
-          <strong></strong>
-          <span></span>
+        <div class="reference">
+          <strong>Name, Position, Company</strong>
+          <span>Contact Number / Email</span>
         </div>
 
-     
-         
-     
+        <p class="muted" style="font-size:.85rem">
+          Replace these placeholders with your reference's details.
+        </p>
       </section>
 
-      <!-- DECLARATION AFTER CHARACTER REFERENCE -->
+      <!-- DECLARATION -->
       <section class="card" id="declaration">
         <h2>✓ Declaration</h2>
 
@@ -632,7 +756,20 @@ footer {
         <strong>MC HARRY C. TOLENTINO</strong>
       </section>
 
-    
+      <!-- CONTACT -->
+      <section class="card">
+        <h2>Get in Touch</h2>
+
+        <p class="muted">
+          For employment opportunities or further information,
+          feel free to contact me.
+        </p>
+
+        <a class="btn" href="mailto:Mcharrytolentino08@gmail.com">
+          Send an Email
+        </a>
+      </section>
+
     </aside>
   </div>
 
@@ -643,8 +780,77 @@ footer {
 
 </main>
 
+<!-- PDF LIBRARY -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
+
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
+
+function downloadPDF(button) {
+  const resume = document.getElementById('top');
+
+  if (typeof html2pdf === 'undefined') {
+    alert('Unable to load the PDF library. Please check your internet connection.');
+    return;
+  }
+
+  const buttons = document.querySelectorAll(
+    'button[onclick="downloadPDF(this)"]'
+  );
+
+  buttons.forEach(function(item) {
+    item.disabled = true;
+    item.textContent = 'Preparing PDF...';
+  });
+
+  const options = {
+    margin: [0.25, 0.25, 0.25, 0.25],
+    filename: 'Mc_Harry_C_Tolentino_Resume.pdf',
+
+    image: {
+      type: 'jpeg',
+      quality: 0.98
+    },
+
+    html2canvas: {
+      scale: 2,
+      useCORS: true,
+      backgroundColor: '#000000',
+      scrollY: 0
+    },
+
+    jsPDF: {
+      unit: 'in',
+      format: 'a4',
+      orientation: 'portrait'
+    },
+
+    pagebreak: {
+      mode: ['css', 'legacy'],
+      avoid: ['.card', '.fact', '.item', '.reference']
+    }
+  };
+
+  html2pdf()
+    .set(options)
+    .from(resume)
+    .save()
+    .then(function() {
+      buttons.forEach(function(item) {
+        item.disabled = false;
+        item.textContent = 'Download PDF';
+      });
+    })
+    .catch(function(error) {
+      console.error('PDF download failed:', error);
+      alert('The PDF could not be generated. Please try again.');
+
+      buttons.forEach(function(item) {
+        item.disabled = false;
+        item.textContent = 'Download PDF';
+      });
+    });
+}
 </script>
 
 </body>
