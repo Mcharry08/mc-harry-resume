@@ -1,857 +1,511 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Resume of Mc Harry C. Tolentino">
-<title>Mc Harry C. Tolentino | Resume</title>
-
-<style>
-:root {
-  --navy: #ffffff;
-  --blue: #ffffff;
-  --ink: #ffffff;
-  --muted: #cccccc;
-  --line: #444444;
-  --background: #000000;
-  --card: #080808;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  background: var(--background);
-  color: var(--ink);
-  font: 16px/1.65 Arial, Helvetica, sans-serif;
-}
-
-a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #cccccc;
-}
-
-.nav {
-  background: #000000;
-  border-bottom: 1px solid var(--line);
-  padding: 14px max(22px, calc((100% - 1080px) / 2));
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 14px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.brand {
-  font-weight: 800;
-  color: #ffffff;
-  white-space: nowrap;
-}
-
-.brand span {
-  color: #999999;
-}
-
-.navlinks {
-  display: flex;
-  gap: 18px;
-  color: #ffffff;
-  font-size: .9rem;
-}
-
-.navlinks a {
-  color: #ffffff;
-}
-
-.navlinks a:hover {
-  color: #bbbbbb;
-}
-
-.btn {
-  border: 1px solid #ffffff;
-  border-radius: 9px;
-  background: #ffffff;
-  color: #000000;
-  padding: 11px 16px;
-  font-weight: 700;
-  cursor: pointer;
-  display: inline-block;
-  font-size: .88rem;
-  text-align: center;
-  transition: .2s;
-}
-
-.btn:hover {
-  background: #cccccc;
-  color: #000000;
-}
-
-.secondary {
-  background: #000000;
-  color: #ffffff;
-  border: 1px solid #777777;
-}
-
-.secondary:hover {
-  background: #222222;
-  color: #ffffff;
-}
-
-.btn:disabled {
-  opacity: .6;
-  cursor: wait;
-}
-
-.wrap {
-  max-width: 1080px;
-  margin: 28px auto;
-  padding: 0 20px;
-}
-
-.hero {
-  background: #080808;
-  border: 1px solid #292929;
-  border-radius: 22px;
-  color: #ffffff;
-  padding: 48px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 25px;
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: .78rem;
-  color: #cccccc;
-  font-weight: bold;
-}
-
-.hero h1 {
-  font-size: clamp(2.4rem, 5vw, 4rem);
-  line-height: 1.08;
-  margin: 12px 0;
-  color: #ffffff;
-}
-
-.hero p {
-  color: #dddddd;
-  max-width: 650px;
-}
-
-.actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.profile-photo {
-  border: 3px solid #ffffff;
-  background: #111111;
-  border-radius: 50%;
-  width: 135px;
-  height: 135px;
-  object-fit: cover;
-  display: block;
-  flex-shrink: 0;
-  box-shadow: 0 8px 24px #ffffff12;
-}
-
-.facts {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin: 18px 0 26px;
-}
-
-.fact,
-.card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 20px;
-}
-
-.fact small {
-  display: block;
-  color: #bbbbbb;
-  font-size: .74rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.fact strong {
-  color: #ffffff;
-  overflow-wrap: anywhere;
-}
-
-.layout {
-  display: grid;
-  grid-template-columns: 1.4fr .85fr;
-  gap: 20px;
-  align-items: start;
-}
-
-.column {
-  display: grid;
-  gap: 20px;
-  min-width: 0;
-}
-
-.card {
-  padding: 25px;
-}
-
-.card h2 {
-  font-size: 1.2rem;
-  color: #ffffff;
-  margin: 0 0 16px;
-  padding-bottom: 9px;
-  border-bottom: 1px solid #555555;
-}
-
-.muted {
-  color: #cccccc;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-.timeline {
-  border-left: 2px solid #555555;
-  padding-left: 20px;
-  display: grid;
-  gap: 20px;
-}
-
-.item {
-  position: relative;
-}
-
-.item:before {
-  content: '';
-  position: absolute;
-  left: -26px;
-  top: 6px;
-  width: 10px;
-  height: 10px;
-  background: #ffffff;
-  border: 2px solid #000000;
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px #888888;
-}
-
-.date {
-  font-size: .78rem;
-  color: #dddddd;
-  font-weight: bold;
-}
-
-.item h3 {
-  font-size: 1rem;
-  color: #ffffff;
-  margin: 4px 0;
-}
-
-.item p {
-  margin: 0;
-  color: #cccccc;
-  font-size: .92rem;
-  overflow-wrap: anywhere;
-}
-
-.item ul {
-  margin-bottom: 0;
-}
-
-.item ul li {
-  color: #cccccc;
-}
-
-.skills {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.skill {
-  background: #111111;
-  border: 1px solid #555555;
-  border-radius: 30px;
-  padding: 7px 11px;
-  color: #ffffff;
-  font-size: .88rem;
-}
-
-.detail {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 10px 0;
-  border-bottom: 1px solid #333333;
-  font-size: .9rem;
-}
-
-.detail:last-child {
-  border: 0;
-}
-
-.detail span {
-  color: #cccccc;
-}
-
-.detail strong {
-  color: #ffffff;
-  text-align: right;
-  overflow-wrap: anywhere;
-}
-
-.reference {
-  background: #111111;
-  border: 1px solid #555555;
-  border-radius: 12px;
-  padding: 16px;
-}
-
-.reference strong,
-.reference span {
-  display: block;
-  color: #ffffff;
-}
-
-.reference span {
-  color: #cccccc;
-}
-
-footer {
-  color: #bbbbbb;
-  text-align: center;
-  padding: 25px;
-  font-size: .85rem;
-  border-top: 1px solid #444444;
-  margin-top: 25px;
-}
-
-@media (max-width: 900px) {
-  .nav {
-    flex-wrap: wrap;
-  }
-
-  .navlinks {
-    gap: 10px;
-  }
-}
-
-@media (max-width: 760px) {
-  .navlinks {
-    display: none;
-  }
-
-  .nav {
-    padding: 12px 16px;
-  }
-
-  .nav .actions {
-    margin-top: 0;
-  }
-
-  .wrap {
-    margin: 18px auto;
-    padding: 0 13px;
-  }
-
-  .hero {
-    padding: 28px 23px;
-    flex-direction: column-reverse;
-    align-items: flex-start;
-  }
-
-  .profile-photo {
-    width: 85px;
-    height: 85px;
-  }
-
-  .hero h1 {
-    font-size: 2.4rem;
-  }
-
-  .facts,
-  .layout {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 21px;
-  }
-}
-
-/* PRINT SETTINGS */
-@media print {
-  @page {
-    size: A4;
-    margin: 10mm;
-  }
-
-  html,
-  body {
-    background: #000000 !important;
-    color: #ffffff !important;
-    print-color-adjust: exact !important;
-    -webkit-print-color-adjust: exact !important;
-  }
-
-  .nav,
-  .actions {
-    display: none !important;
-  }
-
-  .wrap {
-    margin: 0;
-    max-width: none;
-    padding: 0;
-  }
-
-  .hero,
-  .card,
-  .fact,
-  .reference,
-  .skill {
-    background: #080808 !important;
-    color: #ffffff !important;
-    print-color-adjust: exact !important;
-    -webkit-print-color-adjust: exact !important;
-  }
-
-  .hero {
-    border-radius: 0;
-    padding: 25px;
-  }
-
-  .layout {
-    grid-template-columns: 1.3fr 1fr;
-    gap: 12px;
-  }
-
-  .column {
-    gap: 12px;
-  }
-
-  .card {
-    padding: 14px;
-    break-inside: avoid;
-  }
-
-  .item,
-  .fact,
-  .reference {
-    break-inside: avoid;
-  }
-
-  .card h2,
-  .item h3,
-  .item p,
-  .item ul,
-  .detail strong,
-  .detail span,
-  .muted,
-  footer {
-    color: #ffffff !important;
-  }
-
-  a {
-    color: #ffffff !important;
-    text-decoration: none !important;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mc Harry C. Tolentino - Resume</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111;
+      color: #fff;
+      line-height: 1.6;
+      padding: 25px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .buttons button {
+      padding: 12px 22px;
+      border: 1px solid #777;
+      border-radius: 6px;
+      background: #222;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .buttons button:hover {
+      background: #444;
+    }
+
+    .resume {
+      max-width: 1000px;
+      margin: auto;
+      padding: 28px;
+      background: #000;
+      border: 1px solid #555;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #777;
+    }
+
+    .profile-photo {
+      width: 145px;
+      height: 165px;
+      object-fit: cover;
+      border: 2px solid #888;
+      border-radius: 5px;
+      flex-shrink: 0;
+    }
+
+    .header-info h1 {
+      font-size: 30px;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .header-info h3 {
+      color: #ccc;
+      font-size: 16px;
+      font-weight: normal;
+      margin-bottom: 12px;
+    }
+
+    .contact {
+      color: #ddd;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .card {
+      background: #080808;
+      border: 1px solid #555;
+      border-radius: 6px;
+      padding: 18px;
+      margin-bottom: 20px;
+      break-inside: avoid;
+    }
+
+    .card h2 {
+      color: #fff;
+      font-size: 17px;
+      padding-bottom: 8px;
+      margin-bottom: 13px;
+      border-bottom: 1px solid #777;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .card h3 {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    .card p,
+    .card li {
+      color: #ddd;
+      font-size: 13px;
+    }
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .card li {
+      margin-bottom: 5px;
+    }
+
+    .item {
+      margin-bottom: 16px;
+      padding-left: 12px;
+      border-left: 2px solid #777;
+      break-inside: avoid;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .date {
+      color: #bbb;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .personal-info p {
+      margin-bottom: 7px;
+    }
+
+    .personal-info strong {
+      color: #fff;
+    }
+
+    .reference {
+      margin-bottom: 15px;
+    }
+
+    .reference:last-child {
+      margin-bottom: 0;
+    }
+
+    .declaration {
+      margin-top: 3px;
+    }
+
+    .signature {
+      margin-top: 25px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .signature-line {
+      width: 230px;
+      border-top: 1px solid #aaa;
+      margin-top: 35px;
+      padding-top: 7px;
+    }
+
+    .note {
+      color: #aaa;
+      font-size: 11px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 700px) {
+      body {
+        padding: 10px;
+      }
+
+      .resume {
+        padding: 15px;
+      }
+
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-info h1 {
+        font-size: 25px;
+      }
+
+      .columns {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+
+      body {
+        background: #000 !important;
+        color: #fff !important;
+        padding: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .buttons {
+        display: none !important;
+      }
+
+      .resume {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+        border: none;
+      }
+
+      .card {
+        background: #080808 !important;
+        break-inside: avoid;
+      }
+
+      .header {
+        break-inside: avoid;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<header class="nav">
-  <a class="brand" href="#top">MC HARRY<span>.</span></a>
-
-  <div class="navlinks">
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#personal">Personal Info</a>
+  <div class="buttons">
+    <button onclick="window.print()">Print Resume</button>
+    <button onclick="downloadPDF()">Download PDF</button>
   </div>
 
-  <div class="actions" style="margin-top:0">
-    <button class="btn secondary" onclick="window.print()">
-      Print Resume
-    </button>
+  <main class="resume" id="resume">
 
-    <button class="btn" onclick="downloadPDF(this)">
-      Download PDF
-    </button>
-  </div>
-</header>
+    <!-- HEADER -->
+    <header class="header">
+      <img
+        src="resumePhoto.jpg"
+        alt="Mc Harry C. Tolentino"
+        class="profile-photo"
+      >
 
-<main class="wrap" id="top">
+      <div class="header-info">
+        <h1>MC HARRY C. TOLENTINO</h1>
+        <h3>Bachelor of Science in Information Technology</h3>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div>
-      <div class="eyebrow">Curriculum Vitae · Personal Profile</div>
-
-      <h1>Mc Harry C.<br>Tolentino</h1>
-
-      <p>
-        Motivated and hardworking Information Technology student eager
-        to apply technical knowledge, develop new skills, and contribute
-        to meaningful projects while growing professionally.
-      </p>
-
-      <div class="actions">
-        <a class="btn" href="mailto:Mcharrytolentino08@gmail.com">
-          Contact Me
-        </a>
-
-        <button class="btn secondary" onclick="window.print()">
-          Print Resume
-        </button>
-
-        <button class="btn secondary" onclick="downloadPDF(this)">
-          Download PDF
-        </button>
+        <div class="contact">
+          <p>Email: Mcharrytolentino08@gmail.com</p>
+          <p>Phone: 0970 108 0411</p>
+          <p>Address: Sta. Lucia, Capas, Tarlac</p>
+        </div>
       </div>
-    </div>
+    </header>
 
-    <img
-      src="resumePhoto.jpg"
-      alt="Mc Harry Tolentino"
-      class="profile-photo"
-    >
-  </section>
+    <div class="columns">
 
-  <!-- CONTACT INFORMATION -->
-  <section class="facts">
-    <div class="fact">
-      <small>Email</small>
-      <strong>
-        <a href="mailto:Mcharrytolentino08@gmail.com">
-          Mcharrytolentino08@gmail.com
-        </a>
-      </strong>
-    </div>
+      <!-- LEFT COLUMN -->
+      <aside>
 
-    <div class="fact">
-      <small>Phone</small>
-      <strong>
-        <a href="tel:09701080411">0970 108 0411</a>
-      </strong>
-    </div>
+        <!-- SKILLS -->
+        <section class="card" id="skills">
+          <h2>Skills &amp; Abilities</h2>
+          <ul>
+            <li>Computer Literate</li>
+            <li>Project Management Skills</li>
+            <li>Team Leadership and Coordination</li>
+            <li>Good Communication Skills</li>
+            <li>Filipino and English Proficient</li>
+            <li>Hardworking and Responsible</li>
+            <li>Fast Learner</li>
+            <li>Problem-Solving Skills</li>
+            <li>Time Management</li>
+            <li>Critical Thinking</li>
+            <li>Adaptable and Flexible</li>
+            <li>Team Player</li>
+          </ul>
+        </section>
 
-    <div class="fact">
-      <small>Location</small>
-      <strong>Sta. Lucia, Capas, Tarlac</strong>
-    </div>
-  </section>
-
-  <div class="layout">
-
-    <!-- LEFT COLUMN -->
-    <div class="column">
-
-      <!-- CAREER OBJECTIVE -->
-      <section class="card" id="about">
-        <h2>✦ Career Objective</h2>
-
-        <p class="muted">
-          To be part of a company where I can enhance my skills and
-          knowledge, gain additional experience, share what I have
-          learned, and contribute to personal development and
-          organizational goals.
-        </p>
-
-        <ul class="muted">
-          <li>Gain knowledge and experience that strengthen my skills.</li>
-          <li>Share my learning experiences, knowledge, and abilities.</li>
-          <li>Seek meaningful employment and achieve professional growth.</li>
-          <li>Contribute to a workplace that values growth, excellence, and teamwork.</li>
-        </ul>
-      </section>
-
-      <!-- EDUCATIONAL BACKGROUND -->
-      <section class="card" id="education">
-        <h2>▤ Educational Background</h2>
-
-        <div class="timeline">
+        <!-- TRAINING AND CERTIFICATES -->
+        <section class="card" id="training">
+          <h2>Training, Seminars &amp; Certificates</h2>
 
           <div class="item">
-            <div class="date">2023 – 2027 (Expected)</div>
+            <div class="date">December 2023</div>
+            <h3>JavaScript Essentials 1 (JSE)</h3>
+          </div>
+
+          <div class="item">
+            <div class="date">November 2024</div>
+            <h3>CCNA: Introduction to Networks</h3>
+          </div>
+
+          <div class="item">
+            <div class="date">May 2025</div>
+            <h3>CCNA: Switching, Routing, and Wireless Essentials</h3>
+          </div>
+
+          <div class="item">
+            <div class="date">March 2026</div>
+            <h3>Introduction to Cybersecurity</h3>
+          </div>
+
+          <div class="item">
+            <div class="date">December 2026</div>
+            <h3>CCNA: Enterprise Networking, Security, and Automation</h3>
+            <p><em>Expected / In Progress, if not yet completed.</em></p>
+          </div>
+        </section>
+
+        <!-- PERSONAL INFORMATION -->
+        <section class="card personal-info" id="personal">
+          <h2>Personal Information</h2>
+
+          <p><strong>Date of Birth:</strong> August 22, 2000</p>
+          <p><strong>Age:</strong> 26</p>
+          <p><strong>Religion:</strong> INC</p>
+          <p><strong>Civil Status:</strong> Single</p>
+          <p><strong>Height:</strong> 5'3"</p>
+          <p><strong>Weight:</strong> 50 kg</p>
+          <p><strong>Father:</strong> Ferdinand Tolentino</p>
+          <p><strong>Mother:</strong> Editha Tolentino</p>
+        </section>
+
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+
+        <!-- CAREER OBJECTIVE -->
+        <section class="card" id="objective">
+          <h2>Career Objective</h2>
+          <p>
+            To obtain an opportunity where I can apply my knowledge and
+            skills in Information Technology, contribute to organizational
+            goals, and continue developing my technical, leadership, and
+            professional abilities.
+          </p>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="card" id="education">
+          <h2>Educational Background</h2>
+
+          <div class="item">
+            <div class="date">2023–2027 (Expected)</div>
             <h3>Bachelor of Science in Information Technology</h3>
             <p>Dominican College of Tarlac</p>
           </div>
 
           <div class="item">
-            <div class="date">2017 – 2019</div>
+            <div class="date">2017–2019</div>
             <h3>Technical-Vocational-Livelihood Education – Agriculture</h3>
-            <p>Pangasinan State University · Sta. Maria, Pangasinan</p>
+            <p>Pangasinan State University</p>
+            <p>Sta. Maria, Pangasinan</p>
           </div>
 
           <div class="item">
-            <div class="date">2013 – 2017</div>
+            <div class="date">2013–2017</div>
             <h3>Secondary Education</h3>
-            <p>Sta. Lucia High School · Sta. Lucia, Capas, Tarlac</p>
+            <p>Sta. Lucia High School</p>
+            <p>Sta. Lucia, Capas, Tarlac</p>
           </div>
 
           <div class="item">
-            <div class="date">2006 – 2013</div>
+            <div class="date">2006–2013</div>
             <h3>Primary Education</h3>
-            <p>Sta. Lucia Elementary School · Sta. Lucia, Capas, Tarlac</p>
+            <p>Sta. Lucia Elementary School</p>
+            <p>Sta. Lucia, Capas, Tarlac</p>
           </div>
+        </section>
 
-        </div>
-      </section>
-
-      <!-- PROJECT EXPERIENCE -->
-      <section class="card" id="projects">
-        <h2>⚙ Project Experience</h2>
-
-        <div class="timeline">
+        <!-- CAPSTONE PROJECT -->
+        <section class="card" id="project">
+          <h2>Project Experience</h2>
 
           <div class="item">
-            <div class="date">2026 · Capstone Project</div>
-
+            <div class="date">2026</div>
             <h3>Project Manager / Capstone Project Leader</h3>
-
             <p>
               <strong>
-                DommUnity: A Desktop-Based Management System for
-                Community Extension &amp; Services Office of
-                Dominican College of Tarlac, Inc.
+                DommUnity: A Desktop-Based Management System for Community
+                Extension &amp; Services Office of Dominican College of
+                Tarlac, Inc.
               </strong>
             </p>
 
-            <ul class="muted">
+            <ul>
               <li>
-                Lead and coordinated the capstone team throughout
-                the system development process.
+                Led and coordinated the capstone team throughout the
+                system development process.
               </li>
               <li>
-                Assigned tasks, monitored project progress, and
-                coordinated project deliverables.
+                Assigned tasks, monitored project progress, and coordinated
+                project deliverables.
               </li>
               <li>
-                Participated in system planning, requirements
-                analysis, development, and testing.
+                Participated in project planning, requirements analysis,
+                system development, and testing.
               </li>
               <li>
-                Collaborated with team members to ensure the
-                system aligned with the project objectives.
+                Collaborated with team members to ensure the project met
+                its objectives and requirements.
               </li>
             </ul>
           </div>
+        </section>
 
-        </div>
-      </section>
+        <!-- CHARACTER REFERENCES -->
+        <section class="card" id="references">
+          <h2>Character References</h2>
 
-      <!-- SKILLS -->
-      <section class="card" id="skills">
-        <h2>✧ Skills &amp; Abilities</h2>
+          <div class="reference">
+            <h3>[Reference Name 1]</h3>
+            <p>[Position / Company]</p>
+            <p>Contact: [Contact Number]</p>
+            <p>Email: [Email Address]</p>
+          </div>
 
-        <div class="skills">
-          <span class="skill">Computer Literate</span>
-          <span class="skill">Filipino &amp; English Proficient</span>
-          <span class="skill">Hardworking</span>
-          <span class="skill">Fast Learner</span>
-        </div>
-      </section>
+          <div class="reference">
+            <h3>[Reference Name 2]</h3>
+            <p>[Position / Company]</p>
+            <p>Contact: [Contact Number]</p>
+            <p>Email: [Email Address]</p>
+          </div>
 
+          <p class="note">
+            Replace the placeholders with the details of your actual
+            character references before submitting your resume.
+          </p>
+        </section>
+
+      </div>
     </div>
 
-    <!-- RIGHT COLUMN -->
-    <aside class="column">
+    <!-- DECLARATION -->
+    <section class="card declaration" id="declaration">
+      <h2>Declaration</h2>
 
-      <!-- PERSONAL INFORMATION -->
-      <section class="card" id="personal">
-        <h2>◎ Personal Information</h2>
+      <p>
+        I hereby certify that the information contained in this resume
+        is true, complete, and correct to the best of my knowledge.
+        Additional information may be furnished upon request.
+      </p>
 
-        <div class="detail">
-          <span>Date of Birth</span>
-          <strong>August 22, 2000</strong>
-        </div>
+      <div class="signature-line">
+        MC HARRY C. TOLENTINO
+      </div>
+    </section>
 
-        <div class="detail">
-          <span>Age</span>
-          <strong>26</strong>
-        </div>
+  </main>
 
-        <div class="detail">
-          <span>Religion</span>
-          <strong>INC</strong>
-        </div>
+  <script>
+    function downloadPDF() {
+      const resume = document.getElementById("resume");
 
-        <div class="detail">
-          <span>Civil Status</span>
-          <strong>Single</strong>
-        </div>
+      const options = {
+        margin: [8, 8, 8, 8],
+        filename: "Mc_Harry_C_Tolentino_Resume.pdf",
+        image: {
+          type: "jpeg",
+          quality: 0.98
+        },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          backgroundColor: "#000"
+        },
+        jsPDF: {
+          unit: "mm",
+          format: "a4",
+          orientation: "portrait"
+        },
+        pagebreak: {
+          mode: ["css", "legacy"]
+        }
+      };
 
-        <div class="detail">
-          <span>Height</span>
-          <strong>5′3″</strong>
-        </div>
-
-        <div class="detail">
-          <span>Weight</span>
-          <strong>50 kg</strong>
-        </div>
-
-        <div class="detail">
-          <span>Father</span>
-          <strong>Ferdinand Tolentino</strong>
-        </div>
-
-        <div class="detail">
-          <span>Mother</span>
-          <strong>Editha Tolentino</strong>
-        </div>
-      </section>
-
-      <!-- CHARACTER REFERENCE -->
-      <section class="card" id="character-reference">
-        <h2>♧ Character Reference</h2>
-
-        <div class="reference">
-          <strong>Name, Position, Company</strong>
-          <span>Contact Number / Email</span>
-        </div>
-
-        <p class="muted" style="font-size:.85rem">
-          Replace these placeholders with your reference's details.
-        </p>
-      </section>
-
-      <!-- DECLARATION -->
-      <section class="card" id="declaration">
-        <h2>✓ Declaration</h2>
-
-        <p class="muted">
-          I hereby certify that the information contained in this resume
-          is true, complete, and correct to the best of my knowledge.
-          Additional information may be furnished upon request.
-        </p>
-
-        <strong>MC HARRY C. TOLENTINO</strong>
-      </section>
-
-      <!-- CONTACT -->
-      <section class="card">
-        <h2>Get in Touch</h2>
-
-        <p class="muted">
-          For employment opportunities or further information,
-          feel free to contact me.
-        </p>
-
-        <a class="btn" href="mailto:Mcharrytolentino08@gmail.com">
-          Send an Email
-        </a>
-      </section>
-
-    </aside>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    © <span id="year"></span> Mc Harry C. Tolentino · Resume Website
-  </footer>
-
-</main>
-
-<!-- PDF LIBRARY -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
-
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-
-function downloadPDF(button) {
-  const resume = document.getElementById('top');
-
-  if (typeof html2pdf === 'undefined') {
-    alert('Unable to load the PDF library. Please check your internet connection.');
-    return;
-  }
-
-  const buttons = document.querySelectorAll(
-    'button[onclick="downloadPDF(this)"]'
-  );
-
-  buttons.forEach(function(item) {
-    item.disabled = true;
-    item.textContent = 'Preparing PDF...';
-  });
-
-  const options = {
-    margin: [0.25, 0.25, 0.25, 0.25],
-    filename: 'Mc_Harry_C_Tolentino_Resume.pdf',
-
-    image: {
-      type: 'jpeg',
-      quality: 0.98
-    },
-
-    html2canvas: {
-      scale: 2,
-      useCORS: true,
-      backgroundColor: '#000000',
-      scrollY: 0
-    },
-
-    jsPDF: {
-      unit: 'in',
-      format: 'a4',
-      orientation: 'portrait'
-    },
-
-    pagebreak: {
-      mode: ['css', 'legacy'],
-      avoid: ['.card', '.fact', '.item', '.reference']
+      html2pdf().set(options).from(resume).save();
     }
-  };
-
-  html2pdf()
-    .set(options)
-    .from(resume)
-    .save()
-    .then(function() {
-      buttons.forEach(function(item) {
-        item.disabled = false;
-        item.textContent = 'Download PDF';
-      });
-    })
-    .catch(function(error) {
-      console.error('PDF download failed:', error);
-      alert('The PDF could not be generated. Please try again.');
-
-      buttons.forEach(function(item) {
-        item.disabled = false;
-        item.textContent = 'Download PDF';
-      });
-    });
-}
-</script>
+  </script>
 
 </body>
 </html>
